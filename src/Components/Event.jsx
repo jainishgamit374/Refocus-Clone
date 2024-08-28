@@ -38,17 +38,25 @@ const Event = () => {
 
                 <motion.div
                     ref={ref}
-                    className=" w-1/2 "
+                    className="w-full lg:w-1/2 mt-8 lg:mt-0"
                     style={{ y }}
-                    >
+                >
                     <motion.div
-                    style={{ opacity}}
-
-                    className="right-content  rounded-xl relative overflow-hidden">
+                        style={{ opacity }}
+                        className="right-content rounded-xl relative overflow-hidden"
+                    >
                         <ArrowBtn />
-                        <video autoPlay muted loop className='w-full h-full object-cover pointer-events-none' src="https://cdn.refokus.com/website/people-short.webm"></video>
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            className="w-full h-full object-cover pointer-events-none"
+                            src="https://cdn.refokus.com/website/people-short.webm"
+                        ></video>
                     </motion.div>
-                    <h1 className='py-2 text-[1.3vw]'>Refokus 2022 Offsite: Where Work Meets Play, Innovation, and Homemade Pasta.</h1>
+                    <h1 className="py-2 text-[3vw] sm:text-[2vw] lg:text-[1.3vw]">
+                        Refokus 2022 Offsite: Where Work Meets Play, Innovation, and Homemade Pasta.
+                    </h1>
                 </motion.div>
             </div>
         </div>

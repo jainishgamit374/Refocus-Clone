@@ -13,13 +13,14 @@ const Card = ({ data }) => {
                 onMouseLeave={() => setPadding(0)}
                 whileHover={{ backgroundColor: hoverColor }}
                 className={`${width} min-h-[64vh] ${bgco} rounded-2xl p-5 flex flex-col hover:bg-[#7443FF] transition-all ease-in-out duration-[0.5s] justify-between`}>
-                <div style={{padding: `${0} ${padding}px`}} className="w-full duration-500 ease-expo">
-                    <div className="flex justify-between items-center">
-                        <h1 className="capitalize">{heading1}</h1>
-                        <BsArrowRight />
+                <div style={{ padding: `${0} ${padding}px` }} className="w-full duration-500 ease-expo">
+                    <div className="flex flex-col md:flex-row justify-between items-center">
+                        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold capitalize">{heading1}</h1>
+                        <BsArrowRight className="text-lg md:text-xl lg:text-2xl" />
                     </div>
-                    <h1 className="text-2xl font-medium mt-5 w-56">{heading2}</h1>
+                    <h1 className="text-xl md:text-2xl lg:text-3xl font-medium mt-5 w-full md:w-3/4 lg:w-1/2">{heading2}</h1>
                 </div>
+
 
                 <div>
                     {

@@ -40,31 +40,33 @@ const Showcase = ({ showdata }) => {
         animate={controls}
         variants={containerVariants}
         transition={{ duration: 0.5, staggerChildren: 0.5, repeat: true }}
-        className="w-full overflow-hidden">
-        <div className={`max-w-screen-xl  mx-auto ${bgco}  p-8 flex items-end justify-between gap-5 rounded-3xl`}>
-          <div className="left-cont w-1/2 h-[100vh] flex flex-col gap-6">
-            <h1 className='text-2xl tracking-widest'>{title}</h1>
-            <div className="image-container w-full h-full flex flex-col justify-between items-end">
-              <div className="img1-cnt w-[55%] rounded-xl overflow-hidden">
-                <img className='w-full h-full object-cover object-center' src={img1} alt="" />
+        className="w-full overflow-hidden"
+      >
+        <div className={`max-w-screen-xl mx-auto ${bgco} p-4 md:p-8 flex flex-col md:flex-row items-center md:items-end justify-between gap-5 rounded-3xl`}>
+          <div className="left-cont w-full md:w-1/2 h-auto md:h-[100vh] flex flex-col gap-6">
+            <h1 className="text-xl md:text-2xl tracking-widest">{title}</h1>
+            <div className="image-container w-full h-full flex flex-col justify-between items-end gap-4">
+              <div className="img1-cnt w-full md:w-[55%] h-48 md:h-auto rounded-xl overflow-hidden">
+                <img className="w-full h-full object-cover object-center" src={img1} alt="" />
               </div>
-              <div className="img2-cnt w-full rounded-xl overflow-hidden">
-                <img className='w-full h-full object-cover object-center' src={img2} alt="" />
+              <div className="img2-cnt w-full h-48 md:h-auto rounded-xl overflow-hidden">
+                <img className="w-full h-full object-cover object-center" src={img2} alt="" />
               </div>
             </div>
           </div>
-          <div className="left-right w-1/2 h-[100vh] flex flex-col justify-between items-start">
-            <div className="video-cnt w-full rounded-xl overflow-hidden">
-              <video autoPlay muted loop src={video}></video>
+          <div className="left-right w-full md:w-1/2 h-auto md:h-[100vh] flex flex-col justify-between items-start gap-4">
+            <div className="video-cnt w-full h-48 md:h-auto rounded-xl overflow-hidden">
+              <video className="w-full h-full object-cover" autoPlay muted loop src={video}></video>
             </div>
             <div className="p-heading">
-              <p className="p-text text-[1vw]">{pheading}</p>
+              <p className="p-text text-[4vw] md:text-[1vw]">{pheading}</p>
             </div>
-            <p className="p-para text-lg">{ppara}</p>
-            <Button text="Visit Website " />
+            <p className="p-para text-base md:text-lg">{ppara}</p>
+            <Button text="Visit Website" />
           </div>
         </div>
       </motion.div>
+
 
     </>
   )

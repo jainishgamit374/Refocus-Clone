@@ -48,6 +48,9 @@ const Button = ({ text = "Start a Project" }) => {
                 </motion.div>
             </motion.div>
         </motion.button>
+
+
+
     );
 };
 

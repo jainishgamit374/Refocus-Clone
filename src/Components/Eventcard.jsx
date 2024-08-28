@@ -22,36 +22,31 @@ const Eventcard = ({ data }) => {
 
   return (
     <>
-      <div
-        ref={ref}
-        className="w-full h-screen flex gap-1 mt-5 ">
+      <div ref={ref} className="w-full h-screen flex flex-col lg:flex-row gap-4 mt-5">
         <motion.div
           style={{ y }}
-          className="left-card flex flex-col justify-start w-1/2 h-full  py-8 px-32">
-          <div className={`img-container w-${width1} h-${height1} relative rounded-2xl bg-red-500 overflow-hidden`}>
+          className="left-card flex flex-col justify-start w-full lg:w-1/2 h-full py-4 px-4 lg:py-8 lg:px-16"
+        >
+          <div className={`img-container w-full h-[80vw] lg:w-${width1} lg:h-${height1} relative rounded-2xl bg-red-500 overflow-hidden`}>
             <ArrowBtn />
-            <img className='w-full h-full object-cover' src={image1} alt="" />
+            <img className="w-full h-full object-cover" src={image1} alt="" />
           </div>
           <div className="card-para">
-            <p className='text-lg py-8'>
-              {parag1}
-            </p>
+            <p className="text-sm lg:text-lg py-4 lg:py-8">{parag1}</p>
           </div>
         </motion.div>
 
-        <div
-          className="right-card flex flex-col justify-end w-1/2 h-full  px-32">
-          <div className={`img-container relative w-${width2} h-${height2} rounded-2xl bg-red-500 overflow-hidden`}>
+        <div className="right-card flex flex-col justify-end w-full lg:w-1/2 h-full py-4 px-4 lg:py-8 lg:px-16">
+          <div className={`img-container w-full h-[80vw] lg:w-${width2} lg:h-${height2} relative rounded-2xl bg-red-500 overflow-hidden`}>
             <ArrowBtn />
-            <img className='image w-full h-full object-cover' src={image2} alt="" />
+            <img className="w-full h-full object-cover" src={image2} alt="" />
           </div>
           <div className="card-para">
-            <p className='text-lg py-8'>
-              {parag2}
-            </p>
+            <p className="text-sm lg:text-lg py-4 lg:py-8">{parag2}</p>
           </div>
         </div>
       </div>
+
     </>
   )
 }
